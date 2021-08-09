@@ -22,7 +22,6 @@ public class ApiTest {
             Response response = getResponse(apiKey,searchWord);
             JsonPath path = response.jsonPath();
             List<MovieProperties> data = path.getList("Search", MovieProperties.class);
-            System.out.println("\nAradığınız kelimeyle ilgili "+data.size()+" adet film var\n");
 
             for (MovieProperties obj : data)
             {
